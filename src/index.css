@@ -1,0 +1,66 @@
+
+#main{
+  background-image: url("https://dictionary.cambridge.org/external/images/ptn-plus.svg");
+  background-color: black;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+.theme{
+  background-color: rgb(255, 255, 255);
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+
+#notFound{
+  font-style: italic;
+  font-size: xx-small;
+  color: rgb(98, 98, 99);
+}
+
+#title{
+  font-family: 'Inter', sans-serif;
+  color: aliceblue;
+}
+
+#word{
+  font-family: 'Times New Roman', Times, serif;
+  font-stretch: ultra-condensed;
+}
+
+#examples{
+  font-style: italic;
+  color: rgb(5, 5, 127);
+}
+
+.li{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20% ;
+}
+
+.extra{
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+@media (min-width: 300px) and (max-width: 575px) {
+  .li{
+      display: grid;
+      grid-template-columns: auto auto;
+  }
+  input{
+    width: 50%;
+  }
+}
+@media (min-width: 576px) and (max-width: 690px) {
+  .li{
+      display: grid;
+      grid-template-columns: auto auto auto;
+  }
+}
