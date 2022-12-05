@@ -11,9 +11,7 @@ const App = () => {
     const data = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
     const dataJ = await data.json();
     setMean(dataJ);
-    console.log(dataJ);
     setMain(dataJ[0]);
-    console.log(dataJ[0]);
     const url = dataJ[0].phonetics[1].audio;
     setAudio(url);
   };
