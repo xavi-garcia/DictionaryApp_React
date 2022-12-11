@@ -9,7 +9,7 @@ const Synonym = ({ mean }) => {
             return def.synonyms.map((paraphrase) => {
               return (
                 <>
-                  <li key={paraphrase} className="text-capitalize fs-5 mx-4 my-2">
+                  <li key={paraphrase} className="text-capitalize fs-5 mx-4 my-2" id="synonyms">
                     {paraphrase}
                   </li>
                 </>

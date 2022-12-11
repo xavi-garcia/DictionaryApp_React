@@ -3,18 +3,18 @@ import React from "react";
 const Antonyms = ({ mean }) => {
   return (
     <>
-      {mean.map((Val) => {
-        return Val.meanings.map((Means) => {
-          return Means.definitions.map((Def) => {
-            return Def.antonyms.map((Ant) => {
+      {mean.map((value) => {
+        return value.meanings.map((meaning) => {
+          return meaning.definitions.map((def) => {
+            return def.antonyms.map((ant) => {
               return (
                 <>
-                {Ant ? (
+                {ant ? (
                   <li className="text-capitalize fs-5 mx-4 my-2">
-                    {Ant}
+                    {ant}
                   </li>
                 ) : (
-                  ""
+                  <p>Audio not found</p>
                 )}
                 </>
               );

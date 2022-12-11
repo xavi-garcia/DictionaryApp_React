@@ -1,7 +1,6 @@
 
 #main{
-  background-image: url("https://dictionary.cambridge.org/external/images/ptn-plus.svg");
-  background-color: black;
+  background-color: #aec9a4;
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -10,31 +9,76 @@
 }
 
 
-.theme{
-  background-color: rgb(255, 255, 255);
-  font-family: 'Inter', sans-serif;
-  padding: 20px;
+@font-face {
+  font-family: "bree";
+  src: url(../public/assets/bree.ttf);
 }
 
-#notFound{
+.theme{
+  background-color: rgb(255, 255, 255);
+  font-weight: lighter;
+  font-family: "bree";
+  padding: 20px;
+  color: #13133a;
+}
+
+#background2 {
+  background-color:whitesmoke;
+}
+
+#notFound {
   font-style: italic;
   font-size: xx-small;
   color: rgb(98, 98, 99);
 }
 
+#phonetics {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: xx-small;
+  color: rgb(98, 98, 99);
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+#audio {
+  width: 25%;
+  align-content: center;
+}
+
 #title{
-  font-family: 'Inter', sans-serif;
+  font-family: "bree";
   color: aliceblue;
+  text-shadow: 0px 4px 12px black;
 }
 
 #word{
-  font-family: 'Times New Roman', Times, serif;
-  font-stretch: ultra-condensed;
+  font-family: "bree";
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.307);
 }
 
 #examples{
   font-style: italic;
-  color: rgb(5, 5, 127);
+  color: #655977;
+  font-weight: lighter;
+  margin-left: 1%;
+}
+
+#definitions {
+  font-weight: lighter;
+}
+
+#synonyms {
+  color: #d4b6da;
+}
+
+#button {
+  background-color: #d1c8ac;
+  font-family: "bree";
+  cursor: pointer;
+}
+
+#partOfSpeech {
+  color: #d4b6da;
 }
 
 .li{

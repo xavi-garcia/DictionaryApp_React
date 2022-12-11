@@ -1,6 +1,6 @@
 import React from "react";
 
-const randomId = Math.floor(Math.random() * 25)
+const randomId = Math.floor(Math.random() * 100)
 
 const PartOfSpeech = ({ mean }) => {
   return (
@@ -9,9 +9,9 @@ const PartOfSpeech = ({ mean }) => {
         return value.meanings.map((meaning) => {
             return (
                 <>
-                  <div key={randomId}className="text-capitalize fs-5 text-start">
+                  <li key={randomId}className="text-capitalize fs-5 text-start" id="partOfSpeech">
                     {meaning.partOfSpeech}
-                  </div>
+                  </li>
                 </>
               );
         });

@@ -1,5 +1,5 @@
 import React from "react";
-const randomId = Math.floor(Math.random() * 25)
+
 
 const Significance = ({ mean }) => {
   return (
@@ -9,10 +9,10 @@ const Significance = ({ mean }) => {
           return meaning.definitions.map((def) => {
             return (
               <>
-                <li key={randomId} className="text-capitalize fs-5 text-start">
+                <li key={def.definition} className="text-capitalize fs-5 text-start" >
                   {def.definition}
                 </li>
-                <p id="examples" key={randomId} className="text-capitalize fs-5 text-start">
+                <p id="examples" key={def.example} className="text-capitalize fs-5 text-start">
                 {def.example}
                 </p>
                 <hr />

@@ -12,6 +12,7 @@ const App = () => {
     const dataJ = await data.json();
     setMean(dataJ);
     setMain(dataJ[0]);
+    console.log(dataJ)
     const url = dataJ[0].phonetics[1].audio;
     setAudio(url);
   };
@@ -44,6 +45,7 @@ const App = () => {
             <button
               className="btn  text-light col-md-1 col-sm-2 mx-2"
               onClick={Search}
+              id="button"
             >
               Search
             </button>
@@ -54,7 +56,7 @@ const App = () => {
       {word === "" ? (
         <Definitions mean={mean} main={main} audio={audio} />
       ) : (
-        <div className="fs-1 text-capitalize text-center fw-bold text-decoration-underline text-white  extra">
+        <div className="fs-1 text-capitalize text-center fw-bold text-decoration-underline text-white extra" id="background2">
         </div>
       )}
     </>

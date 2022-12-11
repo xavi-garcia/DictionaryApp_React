@@ -5,7 +5,7 @@ import Antonym from "./Antonyms";
 import PartOfSpeech from "./PartOfSpeech";
 import Phonetics from "./Phonetics.js";
 
-const randomId = Math.floor(Math.random() * 25)
+const randomId = Math.floor(Math.random() * 100)
 
 const Definitions = ({ mean, main, audio }) => {
   return (
@@ -15,21 +15,20 @@ const Definitions = ({ mean, main, audio }) => {
           <div className="col-12 text-center text-capitalize fs-1 fw-bold  mb-4" id="word">
             {main.word}
           </div>
+          <div id="phonetics" key={randomId}>
+              <Phonetics mean={mean} />
+          </div>
           {audio ? (
-            <audio
+            <div className="text-center">
+              <audio
               controls
-              className="color mb-4 text-center col-12"
               src={audio}
+              id="audio"
             ></audio>
+            </div>
           ) : (
             <div className="color fs-3 text-center" id="notFound">Audio not found</div>
           )}
-          <div className="text-start my-3 text-capitalize fs-4 fw-bold">
-            Phonetics:
-          </div>
-          <div id="notFound">
-              <Phonetics mean={mean} />
-          </div>
           <div className="text-start my-3 text-capitalize fs-4 fw-bold">
             Part Of Speech:
           </div>
@@ -45,7 +44,7 @@ const Definitions = ({ mean, main, audio }) => {
             </ol>
           </div>
           <div className="col-12 text-start my-3 text-capitalize fs-4 fw-bold">
-            Synonyms :
+            Synonyms:
           </div>
           <div>
             <ol key={randomId} className="col-12 li">
@@ -53,7 +52,7 @@ const Definitions = ({ mean, main, audio }) => {
             </ol>
           </div>
           <div className="col-12 text-start my-3 text-capitalize fs-4 fw-bold">
-            Antonyms :
+            Antonyms:
           </div>
           <div>
             <ol key={randomId} className="col-12 li">
